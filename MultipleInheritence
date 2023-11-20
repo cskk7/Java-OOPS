@@ -1,0 +1,31 @@
+public class MultipleInheritence {
+    public static void main(String[] args) {
+        Bike obj = new Bike();
+        obj.accelerate();
+
+        Car obj2 = new Car();
+        obj2.reverse();
+    }
+}
+class Vehicle{
+    String vehicle = "Vehicle";;
+    void accelerate(){
+        System.out.println(vehicle+" moves forward");
+    }
+
+    void brake(){
+        System.out.println(vehicle+" stops");
+    }
+}
+class Car extends Vehicle{
+    void reverse(){
+        vehicle = "Car";
+        System.out.println(vehicle+" goes reverse");
+    }
+}
+class Bike extends Vehicle{
+    void reverse(){
+        vehicle = "Bike";
+        System.out.println(vehicle+" stops");
+    }
+}
